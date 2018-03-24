@@ -38,12 +38,27 @@ How to reproduce an "Database is locked" issue:
    subdirectory.
 
 
+The same issue can be reproduced from the REPL, by running::
+
+  (ql:quickload :app)
+  (mito:connect-toplevel
+     :sqlite3
+     :database-name "db.sqlite")
+  (mito:generate-migrations "migrations")
+  (mito:migrate "migrations")
+  (mito:generate-migrations "migrations")
+
+
 Reproduced with conditions
 ==========================
 
 * Lisp:
+  
   * Clozure Common Lisp Version 1.11-r16635  (DarwinX8664, OSX)
   * SBCL 1.4.3 (OSX)
+    
 * Quicklisp:
+  
   * 2018-02-28
+    
 * Mito: from Github commit 51034f5f7c5d34c7379569dba2ad79236cbac05b

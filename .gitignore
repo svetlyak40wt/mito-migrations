@@ -1,2 +1,7 @@
 /db/
 /db.sqlite
+/quicklisp/
+/schema.sql
+/migrations/
+/db/
+/libssl.dylib

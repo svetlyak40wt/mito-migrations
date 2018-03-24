@@ -18,3 +18,4 @@
    ;;           :reader get-username)
    )
   (:metaclass dao-table-class))
+
