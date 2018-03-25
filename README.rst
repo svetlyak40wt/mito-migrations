@@ -2,7 +2,7 @@
  Mito Migrations for SQLite3 test
 ==================================
 
-How to reproduce an "Database is locked" issue:
+How to reproduce an "DB Error: database table is locked (Code: LOCKED)" issue:
 
 0. Install Roswell, Qlot and mito::
 
@@ -18,7 +18,7 @@ How to reproduce an "Database is locked" issue:
 
 2. Apply initial migration::
 
-     qlot exec
+     qlot exec \
           mito migrate \
                --type sqlite3 \
                --database db.sqlite
@@ -55,6 +55,7 @@ Reproduced with conditions
 * Lisp:
   
   * Clozure Common Lisp Version 1.11-r16635  (DarwinX8664, OSX)
+  * Clozure Common Lisp Version 1.11.5  (Ubuntu Trusty, 16.04)
   * SBCL 1.4.3 (OSX)
     
 * Quicklisp:
